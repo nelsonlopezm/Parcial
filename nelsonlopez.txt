@@ -1,0 +1,40 @@
+plsql.execute <<-SQL
+ create tablespace mid_term
+datafile 'nelson.dbf' size 20M
+SQL
+
+plsql.execute <<-SQL
+CREATE PROFILE examen LIMIT
+PASSWORD_LIFE_TIME              40
+SESSIONS_PER_USER               1
+IDLE_TIME                       5
+FAILED_LOGIN_ATTEMPTS           2;
+SQL
+
+plsql.execute <<-SQL
+create user ejercicios
+identified by ejercicios
+grant create session  to ejercicios
+default tablespace mid_term
+quota UNLIMITED on mid_term;
+SQL
+
+plsql(:data).execute <<-SQL
+ -- CREACION VISTA 1 SIN PUNTO Y COMA
+ -- EJEMPLO CREATE VIEW ...
+SQL
+
+plsql(:data).execute <<-SQL
+ -- CREACION VISTA 2 SIN PUNTO Y COMA
+ -- EJEMPLO CREATE VIEW ...
+SQL
+
+plsql(:data).execute <<-SQL
+ -- CREACION VISTA 3 SIN PUNTO Y COMA
+ -- EJEMPLO CREATE VIEW ...
+SQL
+
+plsql(:data).execute <<-SQL
+ -- CREACION VISTA 4 SIN PUNTO Y COMA
+ -- EJEMPLO CREATE VIEW ...
+SQL
