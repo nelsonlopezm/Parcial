@@ -20,7 +20,7 @@ create table orders
     salesman_id integer
 );
 
-create table orders
+create table salesman
 (
     id integer primary key not null,
     name varchar2(255),
