@@ -14,9 +14,10 @@ SQL
 plsql.execute <<-SQL
 create user ejercicios
 identified by ejercicios
-grant create session  to ejercicios
 default tablespace mid_term
 quota UNLIMITED on mid_term;
+
+grant DBA to ejercicios
 SQL
 
 plsql(:data).execute <<-SQL

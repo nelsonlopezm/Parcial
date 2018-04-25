@@ -1,5 +1,7 @@
 alter session set "_ORACLE_SCRIPT"=true;
 
+grant DBA to ejercicios
+
 create table CUSTOMERS
 (
     id integer primary key not null,
